@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: transaction
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    username: wiam
+    url: jdbc:postgresql://localhost:5432/transaction
+    password: password
+  zipkin:
+    base-url: http://localhost:9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
